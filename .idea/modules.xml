@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jay-client/jay-client.iml" filepath="$PROJECT_DIR$/jay-client/jay-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-common/jay-common.iml" filepath="$PROJECT_DIR$/jay-common/jay-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-config/jay-config.iml" filepath="$PROJECT_DIR$/jay-config/jay-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-dashboard/jay-dashboard.iml" filepath="$PROJECT_DIR$/jay-dashboard/jay-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-eureka/jay-eureka.iml" filepath="$PROJECT_DIR$/jay-eureka/jay-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-order/jay-order.iml" filepath="$PROJECT_DIR$/jay-order/jay-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-pay/jay-pay.iml" filepath="$PROJECT_DIR$/jay-pay/jay-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-product/jay-product.iml" filepath="$PROJECT_DIR$/jay-product/jay-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-web/jay-web.iml" filepath="$PROJECT_DIR$/jay-web/jay-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-zuul/jay-zuul.iml" filepath="$PROJECT_DIR$/jay-zuul/jay-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay_v1.iml" filepath="$PROJECT_DIR$/jay_v1.iml" />
+    </modules>
+  </component>
+</project>

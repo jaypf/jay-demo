@@ -1,0 +1,4 @@
+com\demo\controller\ProductController.class
+com\demo\service\impl\ProductServiceImpl.class
+com\demo\ProductApplication.class
+com\demo\service\ProductService.class

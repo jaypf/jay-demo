@@ -1,0 +1,28 @@
+server:
+  port: 9390
+spring:
+  application:
+    name: jay-order
+feign:
+  hystrix:
+    enabled: true
+
+eureka:
+  client:
+    #是否注册到eureka
+    fetchRegistry: true
+    #是否从eureka中拉取注册信息
+    registerWithEureka: true
+    ##暴露eureka服务的地址
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:9090/eureka/
+    #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+    registry-fetch-interval-seconds: 30
+    #健康检测
+    healthcheck:
+      enabled: true
+  instance:
+    #服务续约，心跳的时间间隔  单位 s
+    lease-renewal-interval-in-seconds: 30
+    #如果从前一次发送心跳时间起，90秒没接受到新的心跳，讲剔除服务
+    lease-expiration-duration-in-seconds: 90

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jay-order" />
+        <module name="jay-product" />
+        <module name="jay-dashboard" />
+        <module name="jay-config" />
+        <module name="jay-pay" />
+        <module name="jay-client" />
+        <module name="jay-common" />
+        <module name="jay-web" />
+        <module name="jay-zuul" />
+        <module name="jay-eureka" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="jay-client" target="1.8" />
+      <module name="jay-common" target="1.8" />
+      <module name="jay-config" target="1.8" />
+      <module name="jay-dashboard" target="1.8" />
+      <module name="jay-eureka" target="1.8" />
+      <module name="jay-order" target="1.8" />
+      <module name="jay-pay" target="1.8" />
+      <module name="jay-product" target="1.8" />
+      <module name="jay-web" target="1.8" />
+      <module name="jay-zuul" target="1.8" />
+      <module name="jay_v1" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jay-client" options="-parameters" />
+      <module name="jay-common" options="-parameters" />
+      <module name="jay-config" options="-parameters" />
+      <module name="jay-dashboard" options="-parameters" />
+      <module name="jay-eureka" options="-parameters" />
+      <module name="jay-order" options="-parameters" />
+      <module name="jay-pay" options="-parameters" />
+      <module name="jay-product" options="-parameters" />
+      <module name="jay-web" options="-parameters" />
+      <module name="jay-zuul" options="-parameters" />
+      <module name="jay_v1" options="-parameters" />
+    </option>
+  </component>
+</project>
