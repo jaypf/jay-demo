@@ -1,6 +1,7 @@
-package com.demo.service;
+package com.demo.service.impl;
 
 import com.demo.constant.Constants;
+import com.demo.service.WebService;
 import com.demo.service.feign.OrderServiceFegin;
 import com.demo.service.feign.ProductServiceFeign;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;

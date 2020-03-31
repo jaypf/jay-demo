@@ -2,3 +2,5 @@
 /config-tmp/
 */target/
 *.iml
+.idea/vcs.xml
+.idea/workspace.xml
