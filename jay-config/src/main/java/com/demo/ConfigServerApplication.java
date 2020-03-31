@@ -10,6 +10,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 /**
  * @ClassName ConfigServerApplication
  * @Description
+ * post
+ * 加密：http://localhost:9890/encrypt?data=123456
+ * 解密：http://localhost:9890/decrypt
  * @Author Jay.Jia
  * @Date 2020/3/31 14:11
  * @Version 1.0

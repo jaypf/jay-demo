@@ -11,6 +11,27 @@ spring:
     loadbalancer:
       retry:
         enabled: true
+    config:
+      label: master
+      profile: dev
+      #这种配置是configserver还单机情况，直接连接这个单机服务就行
+      uri: http://localhost:9890/
+      #configserver高可用配置
+      #开启configserver服务发现功能
+      #spring.cloud.config.discovery.enabled=true
+      #服务发现的服务名称
+      #spring.cloud.config.discovery.service-id=jay-config
+      #如果连接不上获取配置有问题，快速响应失败
+      fail-fast: true
+      retry:
+        #最大重试次数，默认6次
+        max-attempts: 6
+        #最大间隔时间，最大2000ms
+        max-interval: 2000
+        #默认重试的间隔时间，默认1000ms
+        multiplier: 1000
+        #下一间隔时间的乘数，默认是1.1
+        #initial-interval: 1.1
 
 eureka:
   instance:
@@ -97,7 +118,8 @@ management:
     web:
       exposure:
         include: '*'
+
 #====================business config ↓===========================
 product:
-  serverName: jay-product
+  serverName1: jay-product
 #====================business config ↑===========================

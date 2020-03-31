@@ -11,6 +11,34 @@ spring:
     loadbalancer:
       retry:
         enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  config:
+    server:
+      git:
+        password: +pffei102351182
+        search-paths: config-repo
+        uri: https://github.com/jaypf/jay-demo
+        username: jaypf
+        #本地缓存目录
+        basedir: D:\jpf\workspace_jay\jay_v1\config-tmp
+        #强制从GitHub配置中心中拉取配置信息，不走缓存
+        force-pull: true
+
+
+#生成秘钥指令
+#keytool -genkeypair -alias config-server -keyalg RSA -keystore config-server.keystore -validity 365
+
+#加密配置
+encrypt:
+  key-store:
+    alias: config-server
+    location: config-server.keystore
+    password: 123456
+    secret: 123456
 
 eureka:
   instance:
@@ -32,3 +60,9 @@ eureka:
     #健康检测
     healthcheck:
       enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
