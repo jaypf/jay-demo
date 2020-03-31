@@ -1,6 +1,0 @@
-com\demo\service\impl\WebServiceImpl.class
-com\demo\WebApplication.class
-com\demo\config\SwaggerConfig.class
-com\demo\service\WebService.class
-com\demo\constant\Constants.class
-com\demo\controller\WebController.class
