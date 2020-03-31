@@ -31,15 +31,15 @@ spring:
 
 
 #生成秘钥指令
-#keytool -genkeypair -alias config-server -keyalg RSA -keystore config-server.keystore -validity 365
-
-#加密配置
-#encrypt:
-#  key-store:
-#    alias: config-server
-#    location: config-server.keystore
-#    password: 123456
-#    secret: 123456
+#keytool -genkeypair -alias jay-config -keyalg RSA -keystore jay-config.keystore -validity 365
+#这里除了密码其他全填的的jay
+#加密配置(需要放到bootstrap文件中)
+encrypt:
+  key-store:
+    alias: jay-config
+    location: jay-config.keystore
+    password: 123456
+    secret: 123456
 
 eureka:
   instance:

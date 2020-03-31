@@ -25,6 +25,9 @@ public class WebServiceImpl implements WebService {
 
     @Value("${product.serverName}")
     private String productServerName;
+    @Value("${product.productName:}")
+    private String productName;
+
     @Value("${server.port}")
     private String port;
 
