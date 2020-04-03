@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.demo</groupId>
-  <artifactId>jay-zuul</artifactId>
+  <artifactId>jay-service-api</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>jay-zuul</name>
+  <name>jay-service-api</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -97,21 +97,6 @@
       <version>${swagger.version}</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-config</artifactId>
-      <version>LATEST</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-    </dependency>
   </dependencies>
 
   <dependencyManagement>

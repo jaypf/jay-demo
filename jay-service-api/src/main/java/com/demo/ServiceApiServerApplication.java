@@ -16,13 +16,13 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @Slf4j
 @SpringBootApplication
 @EnableEurekaClient
-public class ClientApplication implements CommandLineRunner {
+public class ServiceApiServerApplication implements CommandLineRunner {
     public static void main(String[] args) {
-        SpringApplication.run(ClientApplication.class, args);
+        SpringApplication.run(ServiceApiServerApplication.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
-        log.info("================CLIENT-SERVER START SUCCESS!!!=====================");
+        log.info("================SERVICEAPI-SERVER START SUCCESS!!!=====================");
     }
 }

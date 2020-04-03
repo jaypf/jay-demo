@@ -12,8 +12,9 @@
         <module>jay-config</module>
         <module>jay-eureka</module>
         <module>jay-zuul</module>
-        <module>jay-client</module>
+        <module>jay-service-api</module>
         <module>jay-dashboard</module>
+        <module>jay-admin</module>
 
     </modules>
     <parent>

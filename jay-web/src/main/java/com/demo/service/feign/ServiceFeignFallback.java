@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @Date 2020/3/30 15:04
  * @Version 1.0
  */
-@Service
+//@Service//feign中配置fallback后使用
 public class ServiceFeignFallback implements ProductServiceFeign{
 
     @Override

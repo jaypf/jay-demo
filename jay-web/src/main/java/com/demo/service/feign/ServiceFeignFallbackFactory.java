@@ -34,7 +34,7 @@ public class ServiceFeignFallbackFactory implements FallbackFactory {
             @Override
             public String test1(Integer ms) {
                 log.error("===OrderServiceFegin.test1 is error!!===");
-                return null;
+                return msg;
             }
         };
 

@@ -1,7 +1,7 @@
 package com.demo.service;
 
 /**
- * @ClassName ProductService
+ * @ClassName ProductApiService
  * @Description TODO
  * @Author Jay.Jia
  * @Date 2020/3/25 23:01

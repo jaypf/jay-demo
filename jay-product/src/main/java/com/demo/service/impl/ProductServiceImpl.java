@@ -19,6 +19,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Value("${server.port}")
     private String port;
+    @Value("${product.productName:}")
+    private String productName;
 
     @Override
     public String test1(){

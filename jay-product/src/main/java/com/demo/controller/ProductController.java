@@ -17,25 +17,25 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Api(value = "Product", tags = {"Product"})
 @RestController
-@RequestMapping("/product/v1")
+@RequestMapping("/product")
 public class ProductController {
 
     @Autowired
     private ProductService productService;
 
 
-    @RequestMapping(value = "/test1", method = RequestMethod.GET)
+    @RequestMapping(value = "/v1/test1", method = RequestMethod.GET)
     public String test1(){
         return productService.test1();
     }
 
-    @RequestMapping(value = "/test2", method = RequestMethod.GET)
+    @RequestMapping(value = "/v1/test2", method = RequestMethod.GET)
     public String test2(){
         return productService.test1();
     }
 
 
-    @RequestMapping(value = "/getAllProduct", method = RequestMethod.GET)
+    @RequestMapping(value = "/v1/getAllProduct", method = RequestMethod.GET)
     public String getAllProduct(@RequestParam("ms") Integer ms){
         return productService.getAllProduct(ms);
     }

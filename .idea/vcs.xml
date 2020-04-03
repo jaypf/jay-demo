@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/config-tmp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/jpfworkspace_jayjay_v1config-tmp" vcs="Git" />
   </component>
 </project>
