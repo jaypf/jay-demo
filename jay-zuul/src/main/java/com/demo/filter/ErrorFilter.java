@@ -16,7 +16,7 @@ import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 public class ErrorFilter extends ZuulFilter {
     @Override
     public String filterType() {
-        return FilterConstants.PRE_TYPE;
+        return FilterConstants.ERROR_TYPE;
     }
 
     @Override
