@@ -12,8 +12,9 @@
         <module name="jay-order" />
         <module name="jay-config" />
         <module name="jay-pay" />
-        <module name="jay-admin" />
         <module name="jay-service-api" />
+        <module name="jay-author-security" />
+        <module name="jay-admin" />
         <module name="jay-common" />
         <module name="jay-web" />
         <module name="jay-zuul" />
@@ -22,6 +23,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="jay-admin" target="1.8" />
+      <module name="jay-author" target="1.8" />
+      <module name="jay-author-security" target="1.8" />
       <module name="jay-common" target="1.8" />
       <module name="jay-config" target="1.8" />
       <module name="jay-dashboard" target="1.8" />
@@ -38,6 +41,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="jay-admin" options="-parameters" />
+      <module name="jay-author" options="-parameters" />
+      <module name="jay-author-jwy" options="-parameters" />
+      <module name="jay-author-security" options="-parameters" />
       <module name="jay-common" options="-parameters" />
       <module name="jay-config" options="-parameters" />
       <module name="jay-dashboard" options="-parameters" />

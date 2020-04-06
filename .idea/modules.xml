@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jay-admin/jay-admin.iml" filepath="$PROJECT_DIR$/jay-admin/jay-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-author/jay-author.iml" filepath="$PROJECT_DIR$/jay-author/jay-author.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-author/jay-author-jwy/jay-author-jwy.iml" filepath="$PROJECT_DIR$/jay-author/jay-author-jwy/jay-author-jwy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-author/jay-author-security/jay-author-security.iml" filepath="$PROJECT_DIR$/jay-author/jay-author-security/jay-author-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/jay-common/jay-common.iml" filepath="$PROJECT_DIR$/jay-common/jay-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/jay-config/jay-config.iml" filepath="$PROJECT_DIR$/jay-config/jay-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/jay-dashboard/jay-dashboard.iml" filepath="$PROJECT_DIR$/jay-dashboard/jay-dashboard.iml" />

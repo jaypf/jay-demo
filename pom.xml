@@ -15,6 +15,7 @@
         <module>jay-service-api</module>
         <module>jay-dashboard</module>
         <module>jay-admin</module>
+        <module>jay-author</module>
 
     </modules>
     <parent>
