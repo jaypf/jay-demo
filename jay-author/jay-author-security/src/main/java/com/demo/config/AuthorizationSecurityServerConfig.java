@@ -106,6 +106,7 @@ public class AuthorizationSecurityServerConfig extends AuthorizationServerConfig
                 .accessTokenValiditySeconds(1200)
                 .refreshTokenValiditySeconds(50000)
                 .and()
+                //这里配置了密码模式
                 .withClient("jay-zuul")
                 .resourceIds("jay-zuul")
                 .authorizedGrantTypes("password", "refresh_token")

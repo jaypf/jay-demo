@@ -26,3 +26,15 @@ eureka:
     lease-renewal-interval-in-seconds: 30
     #如果从前一次发送心跳时间起，90秒没接受到新的心跳，讲剔除服务
     lease-expiration-duration-in-seconds: 90
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://jay-zuul/auth/oauth/token
+      client-secret: 123456
+      clientId: jay-order
+      grant-type: password
+      scope: all
+    resource:
+      prefer-token-info: false
+      user-info-uri: http://localhost:9490/auth/security/check

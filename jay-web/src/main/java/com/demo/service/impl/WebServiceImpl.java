@@ -10,8 +10,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @ClassName WebServiceImpl
@@ -25,10 +31,10 @@ import org.springframework.web.client.RestTemplate;
 @Service("webServiceImpl")
 public class WebServiceImpl implements WebService {
 
-    @Value("${product.serverName}")
+    @Value("${product.serverName:}")
     private String productServerName;
-    @Value("${product.productName:}")
-    private String productName;
+    @Value("${order.serverName:jay-order}")
+    private String orderServerName;
 
     @Value("${server.port}")
     private String port;
@@ -121,5 +127,33 @@ public class WebServiceImpl implements WebService {
         long t2 = System.currentTimeMillis();
         log.info(result+"======耗时：" + (t2 - t1) + "ms");
         return result;
+    }
+
+//    @HystrixCommand(fallbackMethod = "queryContentsFallback",
+//            commandKey = "queryContents-oauth",
+//            groupKey = "querygroup-one",
+//            commandProperties = {
+//                    @HystrixProperty(name = "execution.isolation.semaphore.maxConcurrentRequests",value = "100"),
+//                    @HystrixProperty(name = "execution.isolation.strategy", value = "SEMAPHORE"),
+//                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000000000")
+//            },
+//            threadPoolKey = "queryContentshystrixJackpool", threadPoolProperties = {
+//            @HystrixProperty(name = "coreSize", value = "100")
+//    })
+    @Override
+    public String test6(HttpServletRequest request) {
+        String path = "/order/v1/ouath";
+        log.info(Thread.currentThread().getName() + "========queryContents=========");
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", request.getHeader("Authorization"));
+        String results = restTemplate.exchange("http://"
+                        + orderServerName + path, HttpMethod.GET,
+                new HttpEntity<String>(headers), String.class).getBody();
+        return results;
+    }
+
+    public String queryContentsFallback(HttpServletRequest request){
+        log.error("queryContentsFallback is error !");
+        return "你被降级啦！！！";
     }
 }

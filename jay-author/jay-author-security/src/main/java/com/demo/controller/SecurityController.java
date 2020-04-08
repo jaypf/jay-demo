@@ -9,7 +9,7 @@ import java.security.Principal;
 
 /**
  * @ClassName SecurityController
- * @Description TODO
+ * @Description 认证服务器 token 校验和校验结果返回接口
  * @Author Jay.Jia
  * @Date 2020/4/6 6:34
  * @Version 1.0
@@ -21,7 +21,7 @@ public class SecurityController {
 
     @RequestMapping(value = "/check", method = RequestMethod.GET)
     public Principal getUser(Principal principal) {
-        log.info(principal.toString());
+        log.info("Token验证:"+principal.toString());
         return principal;
     }
 

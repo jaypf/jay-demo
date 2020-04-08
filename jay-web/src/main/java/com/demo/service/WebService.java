@@ -1,5 +1,7 @@
 package com.demo.service;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @ClassName WebService
  * @Description TODO
@@ -53,4 +55,13 @@ public interface WebService {
      * @return java.lang.String
      **/
     String test5(Integer ms);
+
+    /**
+     * @Description ribbon调用order服务，测试oauth2密码验证
+     * @Param [ms] order睡眠时间
+     * @Author Jay.Jia
+     * @Date 2020/3/30 23:52
+     * @return java.lang.String
+     **/
+    String test6(HttpServletRequest request);
 }

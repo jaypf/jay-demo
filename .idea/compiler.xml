@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jay-dashboard" />
+        <module name="jay-author-security-db" />
         <module name="jay-product" />
         <module name="jay-order" />
         <module name="jay-config" />
@@ -23,8 +24,9 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="jay-admin" target="1.8" />
-      <module name="jay-author" target="1.8" />
+      <module name="jay-author" target="1.5" />
       <module name="jay-author-security" target="1.8" />
+      <module name="jay-author-security-db" target="1.8" />
       <module name="jay-common" target="1.8" />
       <module name="jay-config" target="1.8" />
       <module name="jay-dashboard" target="1.8" />
@@ -44,6 +46,7 @@
       <module name="jay-author" options="-parameters" />
       <module name="jay-author-jwy" options="-parameters" />
       <module name="jay-author-security" options="-parameters" />
+      <module name="jay-author-security-db" options="-parameters" />
       <module name="jay-common" options="-parameters" />
       <module name="jay-config" options="-parameters" />
       <module name="jay-dashboard" options="-parameters" />
