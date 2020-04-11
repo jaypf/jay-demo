@@ -9,7 +9,8 @@ import java.security.Principal;
 
 /**
  * @ClassName SecurityController
- * @Description TODO
+ * @Description 认证服务器 token 校验和校验结果返回接口
+ * 下游服务器进行调用需要权限校验的接口时会被被调用方ouath2拦截器携带请求的token转发过来进行token验证
  * @Author Jay.Jia
  * @Date 2020/4/8 1:20
  * @Version 1.0

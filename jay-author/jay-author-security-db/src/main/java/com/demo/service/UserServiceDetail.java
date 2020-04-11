@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @ClassName UserServiceDetail
- * @Description TODO
+ * @Description 实现UserDetailsService接口，从数据库中获取用户信息判断是否给予授权
  * @Author Jay.Jia
  * @Date 2020/4/7 23:46
  * @Version 1.0
