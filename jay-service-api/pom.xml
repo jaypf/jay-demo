@@ -111,6 +111,17 @@
     </dependencies>
   </dependencyManagement>
 
+  <distributionManagement>
+    <repository>
+      <id>releases</id><!--setting中对应的id-->
+      <url>http://192.168.163.10:8081/repository/jay-maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id><!--setting中对应的id-->
+      <url>http://192.168.163.10:8081/repository/jay-maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>

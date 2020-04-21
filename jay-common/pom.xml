@@ -17,6 +17,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+    <swagger.version>2.7.0</swagger.version>
   </properties>
 
   <parent>
@@ -29,8 +30,19 @@
   <dependencies>
 
     <dependency>
+      <groupId>com.demo</groupId>
+      <artifactId>jay-service-api</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
 
     <dependency>
@@ -38,6 +50,7 @@
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -47,6 +60,7 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
+
     <dependency>
       <groupId>de.codecentric</groupId>
       <artifactId>spring-boot-admin-starter-client</artifactId>
@@ -81,6 +95,39 @@
       <artifactId>spring-retry</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>${swagger.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>${swagger.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+      <version>LATEST</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-oauth2</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+
   </dependencies>
 
   <dependencyManagement>
@@ -94,6 +141,31 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+<!--  <repositories>-->
+<!--    <repository>-->
+<!--      <id>jay-maven-public</id>-->
+<!--      <name>Nexus jay</name>-->
+<!--      <url>http://192.168.163.10:8081/repository/maven-public/</url>-->
+<!--      <releases>-->
+<!--        <enabled>true</enabled>-->
+<!--      </releases>-->
+<!--      <snapshots>-->
+<!--        <enabled>true</enabled>-->
+<!--      </snapshots>-->
+<!--    </repository>-->
+<!--  </repositories>-->
+
+  <distributionManagement>
+    <repository>
+      <id>releases</id><!--setting中对应的id-->
+      <url>http://192.168.163.10:8081/repository/jay-maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id><!--setting中对应的id-->
+      <url>http://192.168.163.10:8081/repository/jay-maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -111,6 +183,11 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
+          <configuration>
+            <verbose>true</verbose>
+            <fork>true</fork>
+            <executable>D:\jpf\soft_dev\jdk1.8.0.131\bin\javac</executable>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>

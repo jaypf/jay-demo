@@ -25,7 +25,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="jay-admin" target="1.8" />
-      <module name="jay-author" target="1.5" />
+      <module name="jay-author" target="1.8" />
       <module name="jay-author-jwt" target="1.8" />
       <module name="jay-author-security" target="1.8" />
       <module name="jay-author-security-db" target="1.8" />
