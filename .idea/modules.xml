@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jay-admin/jay-admin.iml" filepath="$PROJECT_DIR$/jay-admin/jay-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/jay-author/jay-author.iml" filepath="$PROJECT_DIR$/jay-author/jay-author.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jay-author/jay-author-jwt/jay-author-jwt.iml" filepath="$PROJECT_DIR$/jay-author/jay-author-jwt/jay-author-jwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/jay-author/jay-author-jwy/jay-author-jwy.iml" filepath="$PROJECT_DIR$/jay-author/jay-author-jwy/jay-author-jwy.iml" />
       <module fileurl="file://$PROJECT_DIR$/jay-author/jay-author-security/jay-author-security.iml" filepath="$PROJECT_DIR$/jay-author/jay-author-security/jay-author-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/jay-author/jay-author-security-db/jay-author-security-db.iml" filepath="$PROJECT_DIR$/jay-author/jay-author-security-db/jay-author-security-db.iml" />
