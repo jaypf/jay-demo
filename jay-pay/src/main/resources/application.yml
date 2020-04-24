@@ -1,5 +1,5 @@
 server:
-  port: 9490
+  port: 9590
 spring:
   application:
     name: jay-pay

@@ -1,0 +1,8 @@
+D:\jpf\workspace_jay\jay_v1\jay-author\jay-author-security-db\src\main\java\com\demo\AuthorSecurityDBServerApplication.java
+D:\jpf\workspace_jay\jay_v1\jay-author\jay-author-security-db\src\main\java\com\demo\config\AuthorizationServerConfiguration.java
+D:\jpf\workspace_jay\jay_v1\jay-author\jay-author-security-db\src\main\java\com\demo\controller\SecurityController.java
+D:\jpf\workspace_jay\jay_v1\jay-author\jay-author-security-db\src\main\java\com\demo\dao\UserRepository.java
+D:\jpf\workspace_jay\jay_v1\jay-author\jay-author-security-db\src\main\java\com\demo\config\SecurityConfiguration.java
+D:\jpf\workspace_jay\jay_v1\jay-author\jay-author-security-db\src\main\java\com\demo\service\UserServiceDetail.java
+D:\jpf\workspace_jay\jay_v1\jay-author\jay-author-security-db\src\main\java\com\demo\domain\Role.java
+D:\jpf\workspace_jay\jay_v1\jay-author\jay-author-security-db\src\main\java\com\demo\domain\User.java

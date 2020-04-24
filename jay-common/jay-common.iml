@@ -186,7 +186,7 @@
     <orderEntry type="library" name="Maven: io.github.openfeign:feign-slf4j:10.4.0" level="project" />
     <orderEntry type="library" name="Maven: io.github.openfeign:feign-hystrix:10.4.0" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.37" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:1.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:2.7.0" level="project" />

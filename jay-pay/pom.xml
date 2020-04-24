@@ -76,7 +76,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
 
@@ -100,6 +100,7 @@
   </dependencyManagement>
 
   <build>
+    <finalName>jay-pay</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
@@ -143,5 +144,30 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>com.spotify</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+        <version>0.4.13</version>
+        <configuration>
+          <imageName>${project.artifactId}</imageName>
+          <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+          <resources>
+            <resource>
+              <targetPath>/</targetPath>
+              <directory>${project.build.directory}</directory>
+              <include>${project.build.finalName}.jar</include>
+            </resource>
+          </resources>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>com.demo.PayApplication</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>

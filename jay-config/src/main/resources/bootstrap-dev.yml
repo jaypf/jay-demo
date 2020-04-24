@@ -1,0 +1,69 @@
+server:
+  port: 9890
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: jay-config
+  cloud:
+    #开启ribbon重试是true，关闭时需要设置为false
+    loadbalancer:
+      retry:
+        enabled: true
+    config:
+      server:
+        git:
+          password: +pffei102351182
+          search-paths: config-repo
+          uri: https://github.com/jaypf/jay-demo
+          username: jaypf
+          #本地缓存目录
+#          basedir: D:\jpf\workspace_jay\jay_v1\config-tmp
+          #强制从GitHub配置中心中拉取配置信息，不走缓存
+          force-pull: true
+  rabbitmq:
+    host: 172.24.141.23
+    port: 5672
+    username: jay
+    password: jaypf
+
+
+
+#生成秘钥指令
+#keytool -genkeypair -alias jay-config -keyalg RSA -keystore jay-config.keystore -validity 365
+#这里除了密码其他全填的的jay
+#加密配置(需要放到bootstrap文件中)
+encrypt:
+  key-store:
+    alias: jay-config
+    location: jay-config.keystore
+    password: 123456
+    secret: 123456
+
+eureka:
+  instance:
+    hostname: 192.168.163.10
+    #服务续约，心跳的时间间隔
+    lease-renewal-interval-in-seconds: 30
+    #如果从前一次发送心跳时间起，90秒没接受到新的心跳，讲剔除服务
+    lease-expiration-duration-in-seconds: 90
+  client:
+    #是否注册到eureka
+    fetchRegistry: true
+    #是否从eureka中拉取注册信息
+    registerWithEureka: true
+    ##暴露eureka服务的地址
+    serviceUrl:
+      defaultZone: http://admin:admin@${eureka.instance.hostname}:9090/eureka/
+    #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+    registry-fetch-interval-seconds: 30
+    #健康检测
+    healthcheck:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

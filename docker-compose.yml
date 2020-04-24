@@ -1,0 +1,36 @@
+version: '3.1'
+services:
+  jay-eureka:
+    image: jay-eureka
+    restart: always
+    ports:
+      - "9090:9090"
+    environment:
+      - spring.profiles.active=dev
+  jay-config:
+    image: jay-config
+    restart: always
+    ports:
+      - "9890:9890"
+    environment:
+      - spring.profiles.active=dev
+    depends_on:
+      - jay-eureka
+  jay-zuul:
+    image: jay-zuul
+    restart: always
+    ports:
+      - "9490:9490"
+    environment:
+      - spring.profiles.active=dev
+    depends_on:
+      - jay-config
+  jay-web:
+    image: jayweb:0.0.1-SNAPSHOT
+    restart: always
+    ports:
+      - "9190:9190"
+    environment:
+      - spring.profiles.active=dev
+    depends_on:
+      - jay-zuul

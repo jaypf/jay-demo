@@ -78,6 +78,7 @@ public class RefreshTokenAuthenticationEntryPoint extends OAuth2AuthenticationEn
             }
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e.getMessage());
         }
 
     }

@@ -36,6 +36,12 @@
     </dependency>
 
     <dependency>
+      <groupId>com.demo</groupId>
+      <artifactId>jay-common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
@@ -86,7 +92,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
 
@@ -130,6 +136,21 @@
 
   </dependencies>
 
+  <!--settings中没配置时使用该方式-->
+<!--  <repositories>-->
+<!--    <repository>-->
+<!--      <id>jay-maven-public</id>-->
+<!--      <name>Nexus jay</name>-->
+<!--      <url>http://192.168.163.10:8081/repository/maven-public/</url>-->
+<!--      <releases>-->
+<!--        <enabled>true</enabled>-->
+<!--      </releases>-->
+<!--      <snapshots>-->
+<!--        <enabled>true</enabled>-->
+<!--      </snapshots>-->
+<!--    </repository>-->
+<!--  </repositories>-->
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -143,6 +164,7 @@
   </dependencyManagement>
 
   <build>
+    <finalName>jay-web</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
@@ -187,6 +209,22 @@
       </plugins>
     </pluginManagement>
     <plugins>
+      <plugin>
+        <groupId>com.spotify</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+        <version>0.4.13</version>
+        <configuration>
+          <imageName>jayweb:${project.version}</imageName>
+          <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+          <resources>
+            <resource>
+              <targetPath>/</targetPath>
+              <directory>${project.build.directory}</directory>
+              <include>${project.build.finalName}.jar</include>
+            </resource>
+          </resources>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
