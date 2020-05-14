@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.GAreasEntityMapper">
+  <resultMap id="BaseResultMap" type="com.demo.domain.GAreasEntity">
+    <!--@mbg.generated-->
+    <!--@Table g_areas-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="areaid" jdbcType="VARCHAR" property="areaid" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="cityid" jdbcType="VARCHAR" property="cityid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, areaid, area, cityid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from g_areas
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from g_areas
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.demo.domain.GAreasEntity" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into g_areas (areaid, area, cityid
+      )
+    values (#{areaid,jdbcType=VARCHAR}, #{area,jdbcType=VARCHAR}, #{cityid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.demo.domain.GAreasEntity" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into g_areas
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="areaid != null and areaid != ''">
+        areaid,
+      </if>
+      <if test="area != null and area != ''">
+        area,
+      </if>
+      <if test="cityid != null and cityid != ''">
+        cityid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="areaid != null and areaid != ''">
+        #{areaid,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null and area != ''">
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="cityid != null and cityid != ''">
+        #{cityid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.domain.GAreasEntity">
+    <!--@mbg.generated-->
+    update g_areas
+    <set>
+      <if test="areaid != null and areaid != ''">
+        areaid = #{areaid,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null and area != ''">
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="cityid != null and cityid != ''">
+        cityid = #{cityid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.domain.GAreasEntity">
+    <!--@mbg.generated-->
+    update g_areas
+    set areaid = #{areaid,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      cityid = #{cityid,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateBatch" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update g_areas
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="areaid = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=INTEGER} then #{item.areaid,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="area = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=INTEGER} then #{item.area,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+      <trim prefix="cityid = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          when id = #{item.id,jdbcType=INTEGER} then #{item.cityid,jdbcType=VARCHAR}
+        </foreach>
+      </trim>
+    </trim>
+    where id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.id,jdbcType=INTEGER}
+    </foreach>
+  </update>
+  <update id="updateBatchSelective" parameterType="java.util.List">
+    <!--@mbg.generated-->
+    update g_areas
+    <trim prefix="set" suffixOverrides=",">
+      <trim prefix="areaid = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.areaid != null">
+            when id = #{item.id,jdbcType=INTEGER} then #{item.areaid,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="area = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.area != null">
+            when id = #{item.id,jdbcType=INTEGER} then #{item.area,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="cityid = case" suffix="end,">
+        <foreach collection="list" index="index" item="item">
+          <if test="item.cityid != null">
+            when id = #{item.id,jdbcType=INTEGER} then #{item.cityid,jdbcType=VARCHAR}
+          </if>
+        </foreach>
+      </trim>
+    </trim>
+    where id in
+    <foreach close=")" collection="list" item="item" open="(" separator=", ">
+      #{item.id,jdbcType=INTEGER}
+    </foreach>
+  </update>
+  <insert id="batchInsert" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into g_areas
+    (areaid, area, cityid)
+    values
+    <foreach collection="list" item="item" separator=",">
+      (#{item.areaid,jdbcType=VARCHAR}, #{item.area,jdbcType=VARCHAR}, #{item.cityid,jdbcType=VARCHAR}
+        )
+    </foreach>
+  </insert>
+  <insert id="insertOrUpdate" keyColumn="id" keyProperty="id" parameterType="com.demo.domain.GAreasEntity" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into g_areas
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      areaid,
+      area,
+      cityid,
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      #{areaid,jdbcType=VARCHAR},
+      #{area,jdbcType=VARCHAR},
+      #{cityid,jdbcType=VARCHAR},
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=INTEGER},
+      </if>
+      areaid = #{areaid,jdbcType=VARCHAR},
+      area = #{area,jdbcType=VARCHAR},
+      cityid = #{cityid,jdbcType=VARCHAR},
+    </trim>
+  </insert>
+  <insert id="insertOrUpdateSelective" keyColumn="id" keyProperty="id" parameterType="com.demo.domain.GAreasEntity" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into g_areas
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="areaid != null">
+        areaid,
+      </if>
+      <if test="area != null">
+        area,
+      </if>
+      <if test="cityid != null">
+        cityid,
+      </if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="areaid != null">
+        #{areaid,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="cityid != null">
+        #{cityid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+    on duplicate key update 
+    <trim suffixOverrides=",">
+      <if test="id != null">
+        id = #{id,jdbcType=INTEGER},
+      </if>
+      <if test="areaid != null">
+        areaid = #{areaid,jdbcType=VARCHAR},
+      </if>
+      <if test="area != null">
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="cityid != null">
+        cityid = #{cityid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+<!--auto generated by MybatisCodeHelper on 2020-05-14-->
+  <select id="selectByAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from g_areas
+        <where>
+            <if test="id != null">
+                and id=#{id,jdbcType=INTEGER}
+            </if>
+            <if test="areaid != null and areaid != ''">
+                and areaid=#{areaid,jdbcType=VARCHAR}
+            </if>
+            <if test="area != null and area != ''">
+                and area=#{area,jdbcType=VARCHAR}
+            </if>
+            <if test="cityid != null and cityid != ''">
+                and cityid=#{cityid,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+</mapper>

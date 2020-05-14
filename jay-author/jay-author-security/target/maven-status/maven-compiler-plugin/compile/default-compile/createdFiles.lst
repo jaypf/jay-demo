@@ -1,5 +1,0 @@
-com\demo\controller\SecurityController.class
-com\demo\AuthorSecurityServerApplication.class
-com\demo\config\AuthorizationSecurityServerConfig.class
-com\demo\config\SecurityConfig.class
-com\demo\config\MyRedisTokenStore.class
