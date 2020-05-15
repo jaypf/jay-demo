@@ -17,7 +17,7 @@ import java.io.IOException;
 
 /**
  * @ClassName LoginController
- * @Description TODO
+ * @Description 使用授权码模式时获取授权码
  * @Author Jay.Jia
  * @Date 2020/4/9 22:42
  * @Version 1.0

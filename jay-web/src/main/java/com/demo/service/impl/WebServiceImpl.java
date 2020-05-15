@@ -145,7 +145,9 @@ public class WebServiceImpl implements WebService {
         String path = "/order/v1/ouath";
         log.info(Thread.currentThread().getName() + "========queryContents=========");
         HttpHeaders headers = new HttpHeaders();
-        headers.add("Authorization", request.getHeader("Authorization"));
+        //拿不到Authorization的值,先使用临时方案，加一个Authorization1:Bearer your_token
+//        String authorization = request.getHeader("Authorization");
+        headers.add("Authorization", request.getHeader("Authorization1"));
         String results = restTemplate.exchange("http://"
                         + orderServerName + path, HttpMethod.GET,
                 new HttpEntity<String>(headers), String.class).getBody();
