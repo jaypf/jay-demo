@@ -13,53 +13,19 @@ spring:
     config:
       server:
         git:
-          password: +pffei102351182
+          password: zg0001jack
           search-paths: config-repo
-          uri: https://github.com/jaypf/jay-demo
-          username: jaypf
+          uri: https://github.com/zg-jack/zg-config-repo
+          username: zg-jack
+
+#          password: +pffei102351182
+#          search-paths: config-repo
+#          uri: https://github.com/jaypf/jay-demo
+#          username: jaypf
           #本地缓存目录
 #          basedir: D:\jpf\workspace_jay\jay_v1\config-tmp
           #强制从GitHub配置中心中拉取配置信息，不走缓存
           force-pull: true
-          private-key:
-            -----BEGIN OPENSSH PRIVATE KEY-----
-            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
-            -----END OPENSSH PRIVATE KEY-----
 
   rabbitmq:
     host: localhost
