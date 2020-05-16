@@ -7,3 +7,4 @@
 /.idea/
 /jay-web/jay-web.iml
 *.log
+/transaction-logs/tmlog.lck
