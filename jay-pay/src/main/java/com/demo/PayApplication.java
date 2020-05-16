@@ -23,6 +23,6 @@ public class PayApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        log.info("================WEB-SERVER START SUCCESS!!!=====================");
+        log.info("================PAY-SERVER START SUCCESS!!!=====================");
     }
 }

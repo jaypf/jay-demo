@@ -3,6 +3,55 @@ server:
 spring:
   application:
     name: jay-pay
+  aop:
+    proxy-target-class: true
+
+  ## jta相关参数配置
+  # 如果你在JTA环境中，并且仍然希望使用本地事务，你可以设置spring.jta.enabled属性为false以禁用JTA自动配置。
+  jta:
+    enabled: true
+  # 必须配置唯一的资源名
+  mysql:
+    #db1（分布式的第一个库）
+    test1:
+      url: jdbc:mysql://127.0.0.1:3306/jay?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: root
+      minPoolSize: 3
+      maxPoolSize: 25
+      maxLifetime: 20000
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+    #db2(分布式的第二个库)
+    test2:
+      url: jdbc:mysql://127.0.0.1:3306/jay_v1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: root
+      minPoolSize: 3
+      maxPoolSize: 25
+      maxLifetime: 20000
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+  ## Druid监控设置
+  datasource:
+    druid:
+      #web-stat-filter.exclusions: *.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*
+      stat-view-servlet.url-pattern: /druid/*
+      stat-view-servlet.reset-enable: true
+      stat-view-servlet.login-username: admin
+      stat-view-servlet.login-password: admin
+      aop-patterns: com.example.atomikos.service.*
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
 feign:
   hystrix:
     enabled: true
