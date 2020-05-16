@@ -4,9 +4,6 @@ eureka:
     healthcheck:
       enabled: true
 
-server:
-  port: 8090
-
 mybatis:
   mapperLocations: classpath:mapperxml/*.xml
   typeAliasesPackage: com.demo.mapper
@@ -42,7 +39,18 @@ spring:
       config:
         enabled: true
 
-
+  redis:
+    database: 0
+    host: localhost
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+    password: ''
+    port: 6379
+    timeout: 5000
 
 
 #使用刺配可以直接启动无需配置DruidConfig.class

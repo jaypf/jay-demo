@@ -14,6 +14,7 @@ import java.util.List;
 public interface AeraService {
 
     /** 获取区县 */
-    List<GAreasEntity> qryArea();
+    List<GAreasEntity> qryAreas();
+    String qryArea(Integer id);
 
 }

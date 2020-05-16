@@ -168,6 +168,11 @@
       <optional>true</optional>
     </dependency>
 
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+
   </dependencies>
 
   <!--settings中没配置时使用该方式-->
