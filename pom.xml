@@ -42,8 +42,8 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-<!--            <scope>test</scope>-->
+            <artifactId>spring-boot-starter-com.demo.test</artifactId>
+<!--            <scope>com.demo.test</scope>-->
 <!--            <exclusions>-->
 <!--                <exclusion>-->
 <!--                    <groupId>org.junit.vintage</groupId>-->

@@ -1,23 +1,22 @@
-package com.demo.domain;
+package com.demo.bean;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
-    * 行政区域县区信息表
-    */
-@Data
+ * @ClassName AreaDocument
+ * @Description TODO
+ * @Author Jay.Jia
+ * @Date 2020/5/17 23:21
+ * @Version 1.0
+ */
 @Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Document(collection = "areas")
-public class GAreasEntity {
+public class AreaDocument {
+
     @Id
-    private Integer id;
+    private Integer _id;
 
     private String areaid;
 

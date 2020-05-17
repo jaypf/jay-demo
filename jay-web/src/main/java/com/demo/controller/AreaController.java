@@ -51,4 +51,11 @@ public class AreaController {
         return "aeraService.qryArea(id)";
     }
 
+    @ApiOperation(value="mongo")
+    @RequestMapping(value = "/v1/mongo", method = RequestMethod.GET)
+    public String mongo(Integer id){
+        aeraService.mongo(id);
+        return "mongo";
+    }
+
 }

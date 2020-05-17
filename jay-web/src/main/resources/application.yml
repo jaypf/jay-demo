@@ -52,6 +52,32 @@ spring:
     port: 6379
     timeout: 5000
 
+  data:
+    mongodb:
+      address: localhost:27017
+      database: jay
+      username: admin
+      password: admin
+      always-use-m-beans: false
+      connect-timeout: 10000
+      heartbeat-connect-timeout: 20000
+      heartbeat-frequency: 10000
+      heartbeat-socket-timeout: 20000
+      local-threshold: 15
+      max-connection-idel-time: 0
+      max-connection-life-time: 0
+      max-connections-per-host: 100
+      max-wait-time: 120000
+      min-connections-per-host: 10
+      min-heartbeat-frequency: 500
+      server-selection-timeout: 30000
+      socket-keep-alive: false
+      socket-timeout: 0
+      ssl-enabled: false
+      ssl-invalid-host-name-allowed: false
+      threads-allowed-to-block-for-connection-multiplier: 5
+      authentication-database: admin
+
 
 #使用刺配可以直接启动无需配置DruidConfig.class
 #spring:
@@ -72,7 +98,7 @@ spring:
 #    # 获取连接时最大等待时间，单位毫秒
 #    max-wait: 60000
 #    # 申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
-#    test-while-idle: true
+#    com.demo.test-while-idle: true
 #    # 既作为检测的间隔时间又作为testWhileIdel执行的依据
 #    time-between-connect-error-millis: 60000
 #    # 销毁线程时检测当前连接的最后活动时间和当前时间差大于该值时，关闭当前连接
@@ -82,9 +108,9 @@ spring:
 #    # oracle中为 select 1 from dual
 #    validation-query: select 'x'
 #    # 申请连接时会执行validationQuery检测连接是否有效,开启会降低性能,默认为true
-#    test-on-borrow: false
+#    com.demo.test-on-borrow: false
 #    # 归还连接时会执行validationQuery检测连接是否有效,开启会降低性能,默认为true
-#    test-on-return: false
+#    com.demo.test-on-return: false
 #    # 是否缓存preparedStatement,mysql5.5+建议开启
 #    pool-prepared-statements: true
 #    # 当值大于0时poolPreparedStatements会自动修改为true

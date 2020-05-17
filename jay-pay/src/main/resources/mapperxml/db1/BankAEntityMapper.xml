@@ -37,24 +37,24 @@
     <!--@mbg.generated-->
     insert into bank_a
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userName != null and userName != ''">
+      <if com.demo.test="userName != null and userName != ''">
         user_name,
       </if>
-      <if test="money != null">
+      <if com.demo.test="money != null">
         money,
       </if>
-      <if test="status != null and status != ''">
+      <if com.demo.test="status != null and status != ''">
         `status`,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userName != null and userName != ''">
+      <if com.demo.test="userName != null and userName != ''">
         #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="money != null">
+      <if com.demo.test="money != null">
         #{money,jdbcType=BIGINT},
       </if>
-      <if test="status != null and status != ''">
+      <if com.demo.test="status != null and status != ''">
         #{status,jdbcType=VARCHAR},
       </if>
     </trim>
@@ -63,13 +63,13 @@
     <!--@mbg.generated-->
     update bank_a
     <set>
-      <if test="userName != null and userName != ''">
+      <if com.demo.test="userName != null and userName != ''">
         user_name = #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="money != null">
+      <if com.demo.test="money != null">
         money = #{money,jdbcType=BIGINT},
       </if>
-      <if test="status != null and status != ''">
+      <if com.demo.test="status != null and status != ''">
         `status` = #{status,jdbcType=VARCHAR},
       </if>
     </set>
@@ -89,16 +89,16 @@
         <include refid="Base_Column_List"/>
         from bank_a
         <where>
-            <if test="id != null">
+            <if com.demo.test="id != null">
                 and id=#{id,jdbcType=BIGINT}
             </if>
-            <if test="userName != null and userName != ''">
+            <if com.demo.test="userName != null and userName != ''">
                 and user_name=#{userName,jdbcType=VARCHAR}
             </if>
-            <if test="money != null">
+            <if com.demo.test="money != null">
                 and money=#{money,jdbcType=BIGINT}
             </if>
-            <if test="status != null and status != ''">
+            <if com.demo.test="status != null and status != ''">
                 and `status`=#{status,jdbcType=VARCHAR}
             </if>
         </where>
@@ -142,7 +142,7 @@
     <!--@mbg.generated-->
     insert into bank_a
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
+      <if com.demo.test="id != null">
         id,
       </if>
       user_name,
@@ -151,7 +151,7 @@
     </trim>
     values
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
+      <if com.demo.test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
       #{userName,jdbcType=VARCHAR},
@@ -160,7 +160,7 @@
     </trim>
     on duplicate key update 
     <trim suffixOverrides=",">
-      <if test="id != null">
+      <if com.demo.test="id != null">
         id = #{id,jdbcType=BIGINT},
       </if>
       user_name = #{userName,jdbcType=VARCHAR},
@@ -172,46 +172,46 @@
     <!--@mbg.generated-->
     insert into bank_a
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
+      <if com.demo.test="id != null">
         id,
       </if>
-      <if test="userName != null">
+      <if com.demo.test="userName != null">
         user_name,
       </if>
-      <if test="money != null">
+      <if com.demo.test="money != null">
         money,
       </if>
-      <if test="status != null">
+      <if com.demo.test="status != null">
         `status`,
       </if>
     </trim>
     values
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
+      <if com.demo.test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="userName != null">
+      <if com.demo.test="userName != null">
         #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="money != null">
+      <if com.demo.test="money != null">
         #{money,jdbcType=BIGINT},
       </if>
-      <if test="status != null">
+      <if com.demo.test="status != null">
         #{status,jdbcType=VARCHAR},
       </if>
     </trim>
     on duplicate key update 
     <trim suffixOverrides=",">
-      <if test="id != null">
+      <if com.demo.test="id != null">
         id = #{id,jdbcType=BIGINT},
       </if>
-      <if test="userName != null">
+      <if com.demo.test="userName != null">
         user_name = #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="money != null">
+      <if com.demo.test="money != null">
         money = #{money,jdbcType=BIGINT},
       </if>
-      <if test="status != null">
+      <if com.demo.test="status != null">
         `status` = #{status,jdbcType=VARCHAR},
       </if>
     </trim>

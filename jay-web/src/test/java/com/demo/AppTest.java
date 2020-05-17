@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Unit test for simple App.
+ * Unit com.demo.test for simple App.
  */
 public class AppTest 
 {

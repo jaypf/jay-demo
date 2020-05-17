@@ -13,8 +13,11 @@ import java.util.List;
  */
 public interface AeraService {
 
-    /** 获取区县 */
+    /** 获取区县列表 */
     List<GAreasEntity> qryAreas();
+    /** 获取区县 */
     String qryArea(Integer id);
+    /** mongodb测试 */
+    String mongo(Integer id);
 
 }

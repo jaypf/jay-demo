@@ -34,7 +34,7 @@ import java.util.Map;
 @Slf4j
 @Data
 @Configuration
-@PropertySource(value = "classpath:application.yml")
+//@PropertySource(value = "classpath:application.yml")
 @ConfigurationProperties(prefix = "spring.druid",ignoreInvalidFields = true)
 public class DruidConfig {
 

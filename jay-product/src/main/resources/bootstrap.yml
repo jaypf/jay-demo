@@ -21,7 +21,7 @@ spring:
         service-id: jay-config
       fail-fast: true
       label: master
-      profile: test
+      profile: com.demo.test
       retry:
         max-attempts: 6
         max-interval: 2000
