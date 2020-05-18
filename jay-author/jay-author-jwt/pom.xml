@@ -19,6 +19,7 @@
     <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
     <!--    <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>-->
     <swagger.version>2.7.0</swagger.version>
+    <skipTests>true</skipTests>
   </properties>
 
   <parent>

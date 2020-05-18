@@ -1,0 +1,10 @@
+com\demo\AuthorSecurityDBServerApplication.class
+com\demo\controller\SecurityController.class
+com\demo\domain\Role$RoleBuilder.class
+com\demo\domain\User.class
+com\demo\config\AuthorizationServerConfiguration.class
+com\demo\domain\Role.class
+com\demo\service\UserServiceDetail.class
+com\demo\config\SecurityConfiguration.class
+com\demo\dao\UserRepository.class
+com\demo\domain\User$UserBuilder.class

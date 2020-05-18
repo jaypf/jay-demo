@@ -1,0 +1,9 @@
+com\demo\config\OAuth2Config.class
+com\demo\domain\Role$RoleBuilder.class
+com\demo\config\WebSecurityConfig.class
+com\demo\domain\User.class
+com\demo\domain\Role.class
+com\demo\service\UserServiceDetail.class
+com\demo\dao\UserRepository.class
+com\demo\domain\User$UserBuilder.class
+com\demo\AuthorJWTServerApplication.class
