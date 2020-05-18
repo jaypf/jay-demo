@@ -13,19 +13,68 @@ spring:
     config:
       server:
         git:
-          password: zg0001jack
-          search-paths: config-repo
-          uri: https://github.com/zg-jack/zg-config-repo
-          username: zg-jack
-
-#          password: +pffei102351182
-#          search-paths: config-repo
-#          uri: https://github.com/jaypf/jay-demo
-#          username: jaypf
+#当前版本官网对应说明:
+  #https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.2.2.RELEASE/reference/html/#_spring_cloud_config_server
+          timeout: 5
           #本地缓存目录
-#          basedir: D:\jpf\workspace_jay\jay_v1\config-tmp
+          basedir: D:\jpf\workspace_jay\jay_v1\config-tmp
           #强制从GitHub配置中心中拉取配置信息，不走缓存
           force-pull: true
+          search-paths: config-repo
+          uri: git@github.com:jaypf/jay-demo.git
+          ignoreLocalSshSettings: true
+          privateKey: |
+            -----BEGIN RSA PRIVATE KEY-----
+            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
+            -----END RSA PRIVATE KEY-----
 
   rabbitmq:
     host: localhost
