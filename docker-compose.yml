@@ -1,6 +1,9 @@
 version: '3.1'
 services:
   jay-eureka:
+    build:
+      - context: /var/lib/jenkins/workspace/jay_v1
+      - dockerfile: /jay-eureka/src/main/docker/Dockerfile
     image: jay-eureka
     restart: always
     ports:
@@ -8,6 +11,9 @@ services:
     environment:
       - spring.profiles.active=dev
   jay-config:
+    build:
+      context: /var/lib/jenkins/workspace/jay_v1
+      dockerfile: /jay-config/src/main/docker/Dockerfile
     image: jay-config
     restart: always
     ports:
@@ -17,6 +23,9 @@ services:
     depends_on:
       - jay-eureka
   jay-zuul:
+    build:
+      context: /var/lib/jenkins/workspace/jay_v1
+      dockerfile: /jay-zuul/src/main/docker/Dockerfile
     image: jay-zuul
     restart: always
     ports:
@@ -26,6 +35,9 @@ services:
     depends_on:
       - jay-config
   jay-web:
+    build:
+      context: /var/lib/jenkins/workspace/jay_v1
+      dockerfile: /jay-web/src/main/docker/Dockerfile
     image: jayweb:0.0.1-SNAPSHOT
     restart: always
     ports:
