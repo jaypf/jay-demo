@@ -78,3 +78,7 @@ ribbon:
   NFLoadBalancerPingClassName: com.netflix.loadbalancer.PingUrl
   #ping间隔，可配置为新实现类
   #NFLoadBalancerPingInterval: 2
+
+elasticsearch:
+  host: 192.168.163.10
+  port: 9200
